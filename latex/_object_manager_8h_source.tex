@@ -1,0 +1,38 @@
+\doxysection{Object\+Manager.\+h}
+\hypertarget{_object_manager_8h_source}{}\label{_object_manager_8h_source}\index{Header/ObjectManager.h@{Header/ObjectManager.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ OBJECTMANAGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ OBJECTMANAGER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Object.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_object_manager}{ObjectManager}}\{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_object_manager}{ObjectManager}}();}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_object_manager}{\string~ObjectManager}}();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00028\ \ \ \ \ std::vector<Object*>\ \mbox{\hyperlink{class_object_manager_a06d42be84d2c3c555e2faf1c33cb5db1}{getAllObjects}}()\{\textcolor{keywordflow}{return}\ allObjects;\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00036\ \ \ \ \ std::vector<Object*>::iterator\ \mbox{\hyperlink{class_object_manager_adee12fbe0d8606dd95c9b74c17217671}{getObjectIteratorByName}}(std::string\ objName);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_object}{Object}}\ *\mbox{\hyperlink{class_object_manager_a512bfb9e65696baeea4dd6deacc22f41}{getObjectByName}}(std::string\ objName);}
+\DoxyCodeLine{00044\ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_object_manager_a3e14a4d48e89a2eb042781105e4285a2}{addObject}}(std::string\ objName);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_object_manager_a29b0b14956dd75c5bf3a045b9d3a4dca}{removeObjectByName}}(std::string\ objName);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00057\ \ \ \ \ std::vector<Object*>\ allObjects;}
+\DoxyCodeLine{00058\ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
