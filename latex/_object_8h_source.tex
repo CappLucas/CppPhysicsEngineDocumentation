@@ -1,0 +1,98 @@
+\doxysection{Object.\+h}
+\hypertarget{_object_8h_source}{}\label{_object_8h_source}\index{CppPhysicsEngine/Header/Object.h@{CppPhysicsEngine/Header/Object.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ OBJECT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ OBJECT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_types_8h}{Types.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_physics_equations_8h}{PhysicsEquations.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Circle.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_rectangle_8h}{Rectangle.h}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_object}{Object}}\{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ objects;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ defaultMass;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ defaultGravity;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//constructor\ for\ rectangle}}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_object}{Object}}(std::string\ newName,\ std::string\ objType,\ \mbox{\hyperlink{struct_corner_struct}{Plane}}\ newPlane,\ \mbox{\hyperlink{struct_coord_struct}{Velocity}}\ newVelocity\ =\ \{0,0\},\ \mbox{\hyperlink{struct_coord_struct}{Acceleration}}\ newAcceleration\ =\ \{0,0\},\ \textcolor{keywordtype}{float}\ newMass\ =\ 1)\ :\ name(newName),\ type(objType),\ objectRectangle(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_rectangle}{Rectangle}}(newPlane)),objectVelocity(newVelocity),\ objectAcceleration(newAcceleration),\ objectMass(newMass)\{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{id}\ =\ objects;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ objects++;}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//constructor\ for\ circle}}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_object}{Object}}(std::string\ newName,\ std::string\ objType,\ \mbox{\hyperlink{struct_coord_struct}{Cooridinate}}\ center,\ \textcolor{keywordtype}{float}\ radius,\ \mbox{\hyperlink{struct_coord_struct}{Velocity}}\ newVelocity\ =\ \{0,0\},\ \mbox{\hyperlink{struct_coord_struct}{Acceleration}}\ newAcceleration\ =\ \{0,0\},\ \textcolor{keywordtype}{float}\ newMass\ =\ 1)\ :\ name(newName),\ type(objType),\ objectCircle(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_circle}{Circle}}(center,radius)),\ objectVelocity(newVelocity),\ objectAcceleration(newAcceleration),\ objectMass(newMass)\{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{id}\ =\ objects;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ objects++;}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//public\ variables\ so\ that\ you\ can\ change\ them\ outside\ of\ class}}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_circle}{Circle}}\ *objectCircle\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_rectangle}{Rectangle}}\ *objectRectangle\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ getters\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00040\ \ \ \ \ std::string\ getName()\{\textcolor{keywordflow}{return}\ name;\}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ getId()\{\textcolor{keywordflow}{return}\ id;\}}
+\DoxyCodeLine{00043\ \ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ std::string\ getType()\{\textcolor{keywordflow}{return}\ type;\}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{float}\ getMass()\{\textcolor{keywordflow}{return}\ objectMass;\}}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{struct_coord_struct}{Velocity}}\ getVelocity()\{\textcolor{keywordflow}{return}\ objectVelocity;\}}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{struct_coord_struct}{Acceleration}}\ getAcceleration()\{\textcolor{keywordflow}{return}\ objectAcceleration;\}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{bool}\ getIsAffectedByObjects()\{\textcolor{keywordflow}{return}\ isAffectedByObjects;\}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{bool}\ getIsAffectedByGravity()\{\textcolor{keywordflow}{return}\ isAffectedByGravity;\}}
+\DoxyCodeLine{00052\ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{float}\ getGravity()\{\textcolor{keywordflow}{return}\ gravity;\}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{float}\ getElasticity()\{\textcolor{keywordflow}{return}\ elasticity;\}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ setters\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ setMass(\textcolor{keywordtype}{float}\ newMass)\{\textcolor{keywordflow}{if}(newMass\ >=\ 0)\{objectMass\ =\ newMass;\};\}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ setVelocity(\mbox{\hyperlink{struct_coord_struct}{Velocity}}\ newVelocity)\{objectVelocity\ =\ newVelocity;\}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ setAcceleration(\mbox{\hyperlink{struct_coord_struct}{Acceleration}}\ newAcceleration)\{objectAcceleration\ =\ newAcceleration;\}}
+\DoxyCodeLine{00060\ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ setGravity(\textcolor{keywordtype}{float}\ newGravity)\{gravity\ =\ newGravity;\}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ setElasticity(\textcolor{keywordtype}{float}\ newElasticity)\{\textcolor{keywordflow}{if}(newElasticity\ >=\ 0\ \&\&\ newElasticity\ <=\ 1)\{elasticity\ =\ newElasticity;\}\}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ setIsAffectedByObjects(\textcolor{keywordtype}{bool}\ newBool)\{isAffectedByObjects\ =\ newBool;\}}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ setIsAffectedByGravity(\textcolor{keywordtype}{bool}\ newBool)\{isAffectedByGravity\ =\ newBool;\}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ methods\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//updates\ the\ position\ of\ the\ object\ based\ on\ the\ current\ velocity,\ acceleration,\ mass,\ gravity,\ elasticity,\ and\ other\ boolean\ values.}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//no\ collision\ detection\ takes\ place.}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ updateObject(\textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ std::string\ name;}
+\DoxyCodeLine{00076\ \ \ \ \ }
+\DoxyCodeLine{00077\ \ \ \ \ std::string\ type;}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{float}\ objectMass;}
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{struct_coord_struct}{Velocity}}\ objectVelocity;}
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{struct_coord_struct}{Acceleration}}\ objectAcceleration;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{bool}\ isAffectedByObjects\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{bool}\ isAffectedByGravity\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{comment}{//reference\ to\ the\ static\ gravity\ variable\ so\ that\ when\ you\ change\ the\ static\ you\ change\ all\ the\ others\ too.}}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{float}\ gravity\ =\ Object::defaultGravity;}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{float}\ elasticity\ =\ 1;\ \textcolor{comment}{//perfectly\ elastic,\ and\ zero\ is\ perfectly\ inelastic.}}
+\DoxyCodeLine{00090\ \};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

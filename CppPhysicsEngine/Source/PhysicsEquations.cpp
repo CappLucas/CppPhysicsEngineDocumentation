@@ -1,5 +1,8 @@
 #include "PhysicsEquations.h"
 
+float findForce(float mass, float acceleration){
+    return mass*acceleration;
+}
 //factor in acceleration like the kinematic equation.
 float findDisplacement(float deltaTime, float objectVelocity, float objectAcceleration){
     //         velocity*time + (.5 * acceleration * square(time))

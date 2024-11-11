@@ -1,0 +1,131 @@
+\doxysection{Cpp\+Physics\+Engine/\+Header/\+Types.h File Reference}
+\hypertarget{_types_8h}{}\label{_types_8h}\index{CppPhysicsEngine/Header/Types.h@{CppPhysicsEngine/Header/Types.h}}
+
+
+Contains typedefs used throughout program.  
+
+
+{\ttfamily \#include "{}Object.\+h"{}}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_coord_struct}{Coord\+Struct}}
+\begin{DoxyCompactList}\small\item\em A structure with 2 float values, x and y. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_corner_struct}{Corner\+Struct}}
+\begin{DoxyCompactList}\small\item\em A sructure with 2 \doxylink{struct_coord_struct}{Coord\+Struct} structures, bottom\+Left and top\+Right. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{_types_8h_a2dcce17dc5e0811e1ae894cbce964bff}{Cooridinate}} = \mbox{\hyperlink{struct_coord_struct}{Coord\+Struct}}
+\begin{DoxyCompactList}\small\item\em Used to represent a 2d point. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{_types_8h_a636b071f4d68da5d6c4de60700737390}{Velocity}} = \mbox{\hyperlink{struct_coord_struct}{Coord\+Struct}}
+\begin{DoxyCompactList}\small\item\em Used to hold a 2d point. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{_types_8h_a249a293f546af30cf38ecdedd2208f7e}{Acceleration}} = \mbox{\hyperlink{struct_coord_struct}{Coord\+Struct}}
+\begin{DoxyCompactList}\small\item\em Used to hold a 2d point. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{_types_8h_a5355d31118784b2df66bae4d9cccde10}{Plane}} = \mbox{\hyperlink{struct_corner_struct}{Corner\+Struct}}
+\begin{DoxyCompactList}\small\item\em Used to hold 2 corners, making a plane. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{_types_8h_a0514bc988c4e2d4659ad578c45704c79}{Object\+Vector}} = std\+::vector$<$\mbox{\hyperlink{class_object}{Object}}\texorpdfstring{$\ast$}{*}$>$
+\begin{DoxyCompactList}\small\item\em Used to hold pointers to game objects. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{_types_8h_a4af9d387a8d5349ffabe6f96a7ca1b4b}{Collision\+Object\+Vector}} = std\+::vector$<$\mbox{\hyperlink{_types_8h_a0514bc988c4e2d4659ad578c45704c79}{Object\+Vector}}$>$
+\begin{DoxyCompactList}\small\item\em Used to hold Object\+Vectors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains typedefs used throughout program. 
+
+This file contains structures, like \doxylink{struct_coord_struct}{Coord\+Struct} and \doxylink{struct_corner_struct}{Corner\+Struct}. These structures are then used in "{}using"{} statements.
+
+ex\+: using Cooridinate = \doxylink{struct_coord_struct}{Coord\+Struct}; 
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{_types_8h_a249a293f546af30cf38ecdedd2208f7e}\index{Types.h@{Types.h}!Acceleration@{Acceleration}}
+\index{Acceleration@{Acceleration}!Types.h@{Types.h}}
+\doxysubsubsection{\texorpdfstring{Acceleration}{Acceleration}}
+{\footnotesize\ttfamily \label{_types_8h_a249a293f546af30cf38ecdedd2208f7e} 
+using \mbox{\hyperlink{_types_8h_a249a293f546af30cf38ecdedd2208f7e}{Acceleration}} = \mbox{\hyperlink{struct_coord_struct}{Coord\+Struct}}}
+
+
+
+Used to hold a 2d point. 
+
+Acceleration is of type \doxylink{struct_coord_struct}{Coord\+Struct} and is used to hold the seperate x and y accelerations. \Hypertarget{_types_8h_a4af9d387a8d5349ffabe6f96a7ca1b4b}\index{Types.h@{Types.h}!CollisionObjectVector@{CollisionObjectVector}}
+\index{CollisionObjectVector@{CollisionObjectVector}!Types.h@{Types.h}}
+\doxysubsubsection{\texorpdfstring{CollisionObjectVector}{CollisionObjectVector}}
+{\footnotesize\ttfamily \label{_types_8h_a4af9d387a8d5349ffabe6f96a7ca1b4b} 
+using \mbox{\hyperlink{_types_8h_a4af9d387a8d5349ffabe6f96a7ca1b4b}{Collision\+Object\+Vector}} = std\+::vector$<$\mbox{\hyperlink{_types_8h_a0514bc988c4e2d4659ad578c45704c79}{Object\+Vector}}$>$}
+
+
+
+Used to hold Object\+Vectors. 
+
+Commonly used to represent objects in collision.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{_collision_detection_manager_8h_source}{Collision\+Detection\+Manager.\+h} 
+
+Collision\+Detection\+Manager.\+cpp 
+\end{DoxySeeAlso}
+\Hypertarget{_types_8h_a2dcce17dc5e0811e1ae894cbce964bff}\index{Types.h@{Types.h}!Cooridinate@{Cooridinate}}
+\index{Cooridinate@{Cooridinate}!Types.h@{Types.h}}
+\doxysubsubsection{\texorpdfstring{Cooridinate}{Cooridinate}}
+{\footnotesize\ttfamily \label{_types_8h_a2dcce17dc5e0811e1ae894cbce964bff} 
+using \mbox{\hyperlink{_types_8h_a2dcce17dc5e0811e1ae894cbce964bff}{Cooridinate}} = \mbox{\hyperlink{struct_coord_struct}{Coord\+Struct}}}
+
+
+
+Used to represent a 2d point. 
+
+Cooridinate is of type \doxylink{struct_coord_struct}{Coord\+Struct} \Hypertarget{_types_8h_a0514bc988c4e2d4659ad578c45704c79}\index{Types.h@{Types.h}!ObjectVector@{ObjectVector}}
+\index{ObjectVector@{ObjectVector}!Types.h@{Types.h}}
+\doxysubsubsection{\texorpdfstring{ObjectVector}{ObjectVector}}
+{\footnotesize\ttfamily \label{_types_8h_a0514bc988c4e2d4659ad578c45704c79} 
+using \mbox{\hyperlink{_types_8h_a0514bc988c4e2d4659ad578c45704c79}{Object\+Vector}} = std\+::vector$<$\mbox{\hyperlink{class_object}{Object}}\texorpdfstring{$\ast$}{*}$>$}
+
+
+
+Used to hold pointers to game objects. 
+
+Commonly used in \doxylink{class_object_manager}{Object\+Manager} and \doxylink{class_collision_detection_manager}{Collision\+Detection\+Manager}
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{_object_manager_8h_source}{Object\+Manager.\+h} 
+
+Object\+Manager.\+cpp 
+
+\doxylink{_collision_detection_manager_8h_source}{Collision\+Detection\+Manager.\+h} 
+
+Collision\+Detection\+Manager.\+cpp
+\end{DoxySeeAlso}
+\begin{DoxyWarning}{Warning}
+Object\+Vector contains POINTERS to game OBJECTS. Be carefull when allocating to the std\+::vector. 
+\end{DoxyWarning}
+\Hypertarget{_types_8h_a5355d31118784b2df66bae4d9cccde10}\index{Types.h@{Types.h}!Plane@{Plane}}
+\index{Plane@{Plane}!Types.h@{Types.h}}
+\doxysubsubsection{\texorpdfstring{Plane}{Plane}}
+{\footnotesize\ttfamily \label{_types_8h_a5355d31118784b2df66bae4d9cccde10} 
+using \mbox{\hyperlink{_types_8h_a5355d31118784b2df66bae4d9cccde10}{Plane}} = \mbox{\hyperlink{struct_corner_struct}{Corner\+Struct}}}
+
+
+
+Used to hold 2 corners, making a plane. 
+
+Commonly used in the \doxylink{class_rectangle}{Rectangle} class.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{_rectangle_8h}{Rectangle.\+h} 
+
+Rectangle.\+cpp 
+\end{DoxySeeAlso}
+\Hypertarget{_types_8h_a636b071f4d68da5d6c4de60700737390}\index{Types.h@{Types.h}!Velocity@{Velocity}}
+\index{Velocity@{Velocity}!Types.h@{Types.h}}
+\doxysubsubsection{\texorpdfstring{Velocity}{Velocity}}
+{\footnotesize\ttfamily \label{_types_8h_a636b071f4d68da5d6c4de60700737390} 
+using \mbox{\hyperlink{_types_8h_a636b071f4d68da5d6c4de60700737390}{Velocity}} = \mbox{\hyperlink{struct_coord_struct}{Coord\+Struct}}}
+
+
+
+Used to hold a 2d point. 
+
+Velocity is of type \doxylink{struct_coord_struct}{Coord\+Struct} and is used to hold the seperate x and y velocities. 

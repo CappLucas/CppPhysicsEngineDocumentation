@@ -1,0 +1,70 @@
+\doxysection{Rectangle.\+h}
+\hypertarget{_rectangle_8h_source}{}\label{_rectangle_8h_source}\index{CppPhysicsEngine/Header/Rectangle.h@{CppPhysicsEngine/Header/Rectangle.h}}
+\mbox{\hyperlink{_rectangle_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ RECTANGLE\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ RECTANGLE\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_types_8h}{Types.h}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_rectangle}{Rectangle}}\{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_rectangle_a4edfcaea14426946abbfb55d81c7d068}{Rectangle}}(\mbox{\hyperlink{struct_corner_struct}{Plane}}\ newPlane)\ :\ plane(newPlane)\{\};}
+\DoxyCodeLine{00029\ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_rectangle_ad0b536a31f24fc48e85feb7f0fc1e460}{Rectangle}}(\mbox{\hyperlink{struct_coord_struct}{Cooridinate}}\ newBottomLeftCorner,\ \textcolor{keywordtype}{float}\ length,\ \textcolor{keywordtype}{float}\ height)\{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ plane.bottomLeft\ =\ newBottomLeftCorner;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ plane.topRight\ =\ \{newBottomLeftCorner.x\ +\ length,\ newBottomLeftCorner.y\ +\ height\};}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ getters\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{struct_coord_struct}{Cooridinate}}\ getBottomLeftCorner()\{\textcolor{keywordflow}{return}\ plane.bottomLeft;\}}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{struct_coord_struct}{Cooridinate}}\ getTopRightCorner()\{\textcolor{keywordflow}{return}\ plane.topRight;\}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{float}\ getLeftX()\{\textcolor{keywordflow}{return}\ plane.bottomLeft.x;\}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{float}\ getRightX()\{\textcolor{keywordflow}{return}\ plane.topRight.x;\}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{float}\ getBottomY()\{\textcolor{keywordflow}{return}\ plane.bottomLeft.y;\}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{float}\ getTopY()\{\textcolor{keywordflow}{return}\ plane.topRight.y;\}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{float}\ getLength()\{\textcolor{keywordflow}{return}\ plane.topRight.x\ -\/\ plane.bottomLeft.x;\}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{float}\ getHeight()\{\textcolor{keywordflow}{return}\ plane.topRight.y\ -\/\ plane.bottomLeft.y;\}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{float}\ getXCenter()\{\textcolor{keywordflow}{return}\ (plane.bottomLeft.x\ +\ plane.topRight.x)/2;\}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{float}\ getYCenter()\{\textcolor{keywordflow}{return}\ (plane.bottomLeft.y\ +\ plane.topRight.y)/2;\}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{struct_coord_struct}{Cooridinate}}\ getCenter()\{\textcolor{keywordflow}{return}\ \{getXCenter(),getYCenter()\};\}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ setters\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ setBottomLeft(\mbox{\hyperlink{struct_coord_struct}{Cooridinate}}\ newCorner)\{plane.bottomLeft\ =\ newCorner;\}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ setTopRight(\mbox{\hyperlink{struct_coord_struct}{Cooridinate}}\ newCorner)\{plane.topRight\ =\ newCorner;\}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ setLeftX(\textcolor{keywordtype}{float}\ leftX)\{\textcolor{keywordflow}{if}(leftX\ <\ getRightX())\{plane.bottomLeft.x\ =\ leftX;\}\};}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ setRightX(\textcolor{keywordtype}{float}\ rightX)\{\textcolor{keywordflow}{if}(rightX\ >\ getLeftX())\{plane.topRight.x\ =\ rightX;\}\};}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ setBottomY(\textcolor{keywordtype}{float}\ bottomY)\{\textcolor{keywordflow}{if}(bottomY\ <\ getTopY())\{plane.bottomLeft.x\ =\ bottomY;\}\};}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ setTopY(\textcolor{keywordtype}{float}\ topY)\{\textcolor{keywordflow}{if}(topY\ >\ getBottomY())\{plane.topRight.x\ =\ topY;\}\};}
+\DoxyCodeLine{00064\ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ methods\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rectangle_a06ae1597259b6650579e4860a8c5e090}{moveTo}}(\mbox{\hyperlink{struct_coord_struct}{Cooridinate}}\ newPosition)\{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{comment}{//finds\ how\ much\ the\ rectangle\ has\ to\ move}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_coord_struct}{Cooridinate}}\ displacement\ =\ \{newPosition.x\ -\/\ plane.bottomLeft.x,newPosition.y\ -\/\ plane.bottomLeft.y\};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ plane.bottomLeft\ =\ newPosition;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ plane.topRight\ =\ \{plane.topRight.x\ +\ displacement.x,\ plane.topRight.y\ +\ displacement.y\};}
+\DoxyCodeLine{00079\ \ \ \ \ \};}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rectangle_a0d086cfde709168b2b2270e280908819}{move}}(\mbox{\hyperlink{struct_coord_struct}{Cooridinate}}\ displacement)\{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ plane.bottomLeft.x\ +=\ displacement.x;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ plane.topRight.x\ +=\ displacement.x;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ plane.bottomLeft.y\ +=\ displacement.y;}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ plane.topRight.y\ +=\ displacement.y;}
+\DoxyCodeLine{00092\ \ \ \ \ \};}
+\DoxyCodeLine{00093\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{comment}{//\ holds\ the\ bottom\ left\ corner\ and\ the\ top\ right\ corner\ of\ the\ rectangle.}}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{//\ first\ cooridinate:\ -\/-\/-\/-\/bottom\ left\ corner-\/-\/-\/-\/-\/\ other\ one:\ -\/-\/-\/-\/-\/-\/-\/top\ right\ corner}}
+\DoxyCodeLine{00096\ \ \ \ \ \mbox{\hyperlink{struct_corner_struct}{Plane}}\ plane;}
+\DoxyCodeLine{00097\ \};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

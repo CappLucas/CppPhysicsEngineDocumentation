@@ -1,0 +1,49 @@
+\chapter{C++ Phsyics Engine}
+\hypertarget{index}{}\label{index}\index{C++ Phsyics Engine@{C++ Phsyics Engine}}
+\label{index_md__main_page}%
+\Hypertarget{index_md__main_page}%
+ @\+Main\+Page C++ 2d Physics Engine\hypertarget{index_autotoc_md0}{}\doxysection{\texorpdfstring{C++ 2d Physics Engine}{C++ 2d Physics Engine}}\label{index_autotoc_md0}
+By Lucas Capp\hypertarget{index_autotoc_md1}{}\doxysubsubsection{\texorpdfstring{Description}{Description}}\label{index_autotoc_md1}
+This is a Physics Engine for 2d C++ applications and is a light weight tool designed for fairly simple C++ projects. ~\newline
+ Download or view the code from github \href{https://github.com/CappLucas/CppPhysicsEngine}{\texttt{ here}}. ~\newline
+\hypertarget{index_autotoc_md2}{}\doxysubsubsection{\texorpdfstring{Overview}{Overview}}\label{index_autotoc_md2}
+The physics engine works as follows\+:
+
+
+\begin{DoxyItemize}
+\item Class called {\itshape \doxylink{class_object_manager}{Object\+Manager}} manages objects in the simulation.
+\begin{DoxyItemize}
+\item {\bfseries{stores, removes, adds, finds, and loops through}} objects to update them.
+\end{DoxyItemize}
+\item Class called {\itshape \doxylink{class_object}{Object}} represents any object or entity in your simulation.
+\begin{DoxyItemize}
+\item Contains members like {\bfseries{Velocity}}, {\bfseries{Acceleration}}, {\bfseries{Mass}}, and more.
+\item Contains members based on the given shape.
+\item Updates it\textquotesingle{}s position given a delta time.
+\end{DoxyItemize}
+\item Class called {\itshape \doxylink{class_rectangle}{Rectangle}} represents a rectangular game object.
+\begin{DoxyItemize}
+\item Contains member called plane.
+\end{DoxyItemize}
+\item Class called {\itshape \doxylink{class_circle}{Circle}} represents a circular game object.
+\begin{DoxyItemize}
+\item Contains members like radius and center.
+\end{DoxyItemize}
+\item Class called {\itshape Collision manager} manages collisions
+\begin{DoxyItemize}
+\item Holds a {\itshape reference} to objects in an instance of and {\bfseries{\doxylink{class_object_manager}{Object\+Manager}}} class
+\item Finds collisions, then resolves collisions my changing positions and other attributes of game objects.
+\end{DoxyItemize}
+\item File called {\itshape \doxylink{_physics_equations_8h}{Physics\+Equations.\+h}} holds functions that represent physics equations.
+\begin{DoxyItemize}
+\item Contains functions like {\bfseries{find\+Velocity(delta\+Time, Velocity, Acceleration)}}, or {\bfseries{find\+Force(\+Mass, Acceleration)}}
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+~\newline
+
+
+\begin{quote}
+Note, most if not all classes contain ~\newline
+ public getters and setters for almost ~\newline
+ all class members. \end{quote}

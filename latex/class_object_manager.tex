@@ -1,0 +1,159 @@
+\doxysection{Object\+Manager Class Reference}
+\hypertarget{class_object_manager}{}\label{class_object_manager}\index{ObjectManager@{ObjectManager}}
+
+
+Manages game objects, including creation, storage, and deletion.  
+
+
+
+
+{\ttfamily \#include $<$Object\+Manager.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_object}{Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_object_manager_a06d42be84d2c3c555e2faf1c33cb5db1}{get\+All\+Objects}} ()
+\begin{DoxyCompactList}\small\item\em returns the all\+Objects vector \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_object}{Object}} \texorpdfstring{$\ast$}{*} $>$\+::iterator \mbox{\hyperlink{class_object_manager_af10071708cbaa5d2ad2e658c7a166661}{get\+Object\+Iterator}} (std\+::string obj\+Name)
+\item 
+\Hypertarget{class_object_manager_a79a2cb1ec6ac894a0df400b9c76847ab}\label{class_object_manager_a79a2cb1ec6ac894a0df400b9c76847ab} 
+std\+::vector$<$ \mbox{\hyperlink{class_object}{Object}} \texorpdfstring{$\ast$}{*} $>$\+::iterator {\bfseries get\+Object\+Iterator} (int obj\+Id)
+\item 
+\mbox{\hyperlink{class_object}{Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_object_manager_add120f5ca9daddbdb699cca283d9aec6}{get\+Object}} (std\+::string obj\+Name)
+\item 
+\Hypertarget{class_object_manager_a3bb2f1616ec8164a75409155d52a8daf}\label{class_object_manager_a3bb2f1616ec8164a75409155d52a8daf} 
+\mbox{\hyperlink{class_object}{Object}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Object} (int obj\+Id)
+\item 
+void \mbox{\hyperlink{class_object_manager_a9e966559e9fecdcdd9aac26e3838990e}{add\+Object}} (std\+::string new\+Name, std\+::string obj\+Type, \mbox{\hyperlink{_types_8h_a5355d31118784b2df66bae4d9cccde10}{Plane}} new\+Plane, \mbox{\hyperlink{_types_8h_a636b071f4d68da5d6c4de60700737390}{Velocity}} new\+Velocity=\{0, 0\}, \mbox{\hyperlink{_types_8h_a249a293f546af30cf38ecdedd2208f7e}{Acceleration}} new\+Acceleration=\{0, 0\}, float new\+Mass=1)
+\begin{DoxyCompactList}\small\item\em Overloaded method for adding rectangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_manager_a10ab74c1ac388b4cf71f9937638bc287}{add\+Object}} (std\+::string new\+Name, std\+::string obj\+Type, \mbox{\hyperlink{_types_8h_a2dcce17dc5e0811e1ae894cbce964bff}{Cooridinate}} center, float radius, \mbox{\hyperlink{_types_8h_a636b071f4d68da5d6c4de60700737390}{Velocity}} new\+Velocity=\{0, 0\}, \mbox{\hyperlink{_types_8h_a249a293f546af30cf38ecdedd2208f7e}{Acceleration}} new\+Acceleration=\{0, 0\}, float new\+Mass=1)
+\begin{DoxyCompactList}\small\item\em Overloaded method for adding circle. \end{DoxyCompactList}\item 
+\Hypertarget{class_object_manager_aecba48464ea22e09a67bb8ce3f5f6d26}\label{class_object_manager_aecba48464ea22e09a67bb8ce3f5f6d26} 
+void {\bfseries remove\+Object} (std\+::string obj\+Id)
+\item 
+\Hypertarget{class_object_manager_a766d20e8ea16398c1c86c252147205fe}\label{class_object_manager_a766d20e8ea16398c1c86c252147205fe} 
+void {\bfseries remove\+Object} (int obj\+Id)
+\item 
+\Hypertarget{class_object_manager_aa06e0b95c1d6c0f04aca48dc27943161}\label{class_object_manager_aa06e0b95c1d6c0f04aca48dc27943161} 
+void {\bfseries print\+Object\+Info} ()
+\item 
+\Hypertarget{class_object_manager_a0ff76f8138fdb330cddda809f398d92c}\label{class_object_manager_a0ff76f8138fdb330cddda809f398d92c} 
+void {\bfseries update\+Objects} (float delta\+Time)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_object_manager_ad274b16fb39d910c131e247e30cd7991}\label{class_object_manager_ad274b16fb39d910c131e247e30cd7991} 
+static float {\bfseries gravity}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages game objects, including creation, storage, and deletion. 
+
+The \doxylink{class_object_manager}{Object\+Manager} class is responsible for handling all game objects within the simulation. It provides methods to add, remove, and retrieve objects by their names, as well as to access the complete list of objects. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_object_manager_a10ab74c1ac388b4cf71f9937638bc287}\index{ObjectManager@{ObjectManager}!addObject@{addObject}}
+\index{addObject@{addObject}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{addObject()}{addObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_object_manager_a10ab74c1ac388b4cf71f9937638bc287} 
+void Object\+Manager\+::add\+Object (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+Name}{, }\item[{std\+::string}]{obj\+Type}{, }\item[{\mbox{\hyperlink{_types_8h_a2dcce17dc5e0811e1ae894cbce964bff}{Cooridinate}}}]{center}{, }\item[{float}]{radius}{, }\item[{\mbox{\hyperlink{_types_8h_a636b071f4d68da5d6c4de60700737390}{Velocity}}}]{new\+Velocity}{ = {\ttfamily \{0,0\}}, }\item[{\mbox{\hyperlink{_types_8h_a249a293f546af30cf38ecdedd2208f7e}{Acceleration}}}]{new\+Acceleration}{ = {\ttfamily \{0,0\}}, }\item[{float}]{new\+Mass}{ = {\ttfamily 1}}\end{DoxyParamCaption})}
+
+
+
+Overloaded method for adding circle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Name} & \\
+\hline
+{\em obj\+Type} & \\
+\hline
+{\em center} & \\
+\hline
+{\em radius} & \\
+\hline
+{\em new\+Velocity} & \\
+\hline
+{\em new\+Acceleration} & \\
+\hline
+{\em new\+Mass} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_object_manager_a9e966559e9fecdcdd9aac26e3838990e}\index{ObjectManager@{ObjectManager}!addObject@{addObject}}
+\index{addObject@{addObject}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{addObject()}{addObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_object_manager_a9e966559e9fecdcdd9aac26e3838990e} 
+void Object\+Manager\+::add\+Object (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+Name}{, }\item[{std\+::string}]{obj\+Type}{, }\item[{\mbox{\hyperlink{_types_8h_a5355d31118784b2df66bae4d9cccde10}{Plane}}}]{new\+Plane}{, }\item[{\mbox{\hyperlink{_types_8h_a636b071f4d68da5d6c4de60700737390}{Velocity}}}]{new\+Velocity}{ = {\ttfamily \{0,0\}}, }\item[{\mbox{\hyperlink{_types_8h_a249a293f546af30cf38ecdedd2208f7e}{Acceleration}}}]{new\+Acceleration}{ = {\ttfamily \{0,0\}}, }\item[{float}]{new\+Mass}{ = {\ttfamily 1}}\end{DoxyParamCaption})}
+
+
+
+Overloaded method for adding rectangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Name} & Objects name. \\
+\hline
+{\em obj\+Type} & \doxylink{class_object}{Object} type (\doxylink{class_rectangle}{Rectangle} or \doxylink{class_circle}{Circle}) \\
+\hline
+{\em new\+Plane} & The plane. \\
+\hline
+{\em new\+Velocity} & \\
+\hline
+{\em new\+Acceleration} & \\
+\hline
+{\em new\+Mass} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_object_manager_a06d42be84d2c3c555e2faf1c33cb5db1}\index{ObjectManager@{ObjectManager}!getAllObjects@{getAllObjects}}
+\index{getAllObjects@{getAllObjects}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{getAllObjects()}{getAllObjects()}}
+{\footnotesize\ttfamily \label{class_object_manager_a06d42be84d2c3c555e2faf1c33cb5db1} 
+std\+::vector$<$ \mbox{\hyperlink{class_object}{Object}} \texorpdfstring{$\ast$}{*} $>$ Object\+Manager\+::get\+All\+Objects (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+returns the all\+Objects vector 
+
+\begin{DoxyReturn}{Returns}
+returns all objects. type\+: std\+::vector$<$\+Object\texorpdfstring{$\ast$}{*}$>$ 
+\end{DoxyReturn}
+\Hypertarget{class_object_manager_add120f5ca9daddbdb699cca283d9aec6}\index{ObjectManager@{ObjectManager}!getObject@{getObject}}
+\index{getObject@{getObject}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{getObject()}{getObject()}}
+{\footnotesize\ttfamily \label{class_object_manager_add120f5ca9daddbdb699cca283d9aec6} 
+\mbox{\hyperlink{class_object}{Object}} \texorpdfstring{$\ast$}{*} Object\+Manager\+::get\+Object (\begin{DoxyParamCaption}\item[{std\+::string}]{obj\+Name}{}\end{DoxyParamCaption})}
+
+Given name, returns pointer to object in all\+Objects. if the name given is not found, it returns nullptr. 
+\begin{DoxyParams}{Parameters}
+{\em obj\+Name} & name of the object to delete. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns pointer of type \doxylink{class_object}{Object}. 
+\end{DoxyReturn}
+\Hypertarget{class_object_manager_af10071708cbaa5d2ad2e658c7a166661}\index{ObjectManager@{ObjectManager}!getObjectIterator@{getObjectIterator}}
+\index{getObjectIterator@{getObjectIterator}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{getObjectIterator()}{getObjectIterator()}}
+{\footnotesize\ttfamily \label{class_object_manager_af10071708cbaa5d2ad2e658c7a166661} 
+std\+::vector$<$ \mbox{\hyperlink{class_object}{Object}} \texorpdfstring{$\ast$}{*} $>$\+::iterator Object\+Manager\+::get\+Object\+Iterator (\begin{DoxyParamCaption}\item[{std\+::string}]{obj\+Name}{}\end{DoxyParamCaption})}
+
+given name, returns an iterator to the object from the all\+Objects vector. Has no processing of the iterator, if iterator = all\+Objects.\+end() it will return the iterator anyway.
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj\+Name} & a string of type std\+::string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns an iterator to object of type\+: std\+::vector$<$\+Object\texorpdfstring{$\ast$}{*}$>$\+::iterator 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Cpp\+Physics\+Engine/\+Header/Object\+Manager.\+h\item 
+Cpp\+Physics\+Engine/\+Source/Object\+Manager.\+cpp\end{DoxyCompactItemize}

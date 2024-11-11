@@ -1,0 +1,38 @@
+\doxysection{Types.\+h}
+\hypertarget{_types_8h_source}{}\label{_types_8h_source}\index{CppPhysicsEngine/Header/Types.h@{CppPhysicsEngine/Header/Types.h}}
+\mbox{\hyperlink{_types_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ TYPES\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ TYPES\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}Object.h"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_coord_struct}{CoordStruct}}\{}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{float}\ x;}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{float}\ y;}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_corner_struct}{CornerStruct}}\{}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{struct_coord_struct}{CoordStruct}}\ bottomLeft;}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{struct_coord_struct}{CoordStruct}}\ topRight;}
+\DoxyCodeLine{00041\ \};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{using\ }\mbox{\hyperlink{struct_coord_struct}{Cooridinate}}\ =\ \mbox{\hyperlink{struct_coord_struct}{CoordStruct}};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00060\ \textcolor{keyword}{using\ }\mbox{\hyperlink{struct_coord_struct}{Velocity}}\ =\ \mbox{\hyperlink{struct_coord_struct}{CoordStruct}};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{using\ }\mbox{\hyperlink{struct_coord_struct}{Acceleration}}\ =\ \mbox{\hyperlink{struct_coord_struct}{CoordStruct}};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00082\ \textcolor{keyword}{using\ }\mbox{\hyperlink{struct_corner_struct}{Plane}}\ =\ \mbox{\hyperlink{struct_corner_struct}{CornerStruct}};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00098\ \textcolor{keyword}{using\ }\mbox{\hyperlink{_types_8h_a0514bc988c4e2d4659ad578c45704c79}{ObjectVector}}\ =\ std::vector<Object*>;}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00110\ \textcolor{keyword}{using\ }\mbox{\hyperlink{_types_8h_a4af9d387a8d5349ffabe6f96a7ca1b4b}{CollisionObjectVector}}\ =\ std::vector<ObjectVector>;}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

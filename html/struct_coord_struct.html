@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>C++ Phsyics Engine: C++ Phsyics Engine</title>
+<title>C++ Phsyics Engine: CoordStruct Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -56,8 +56,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="doc-content">
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function(){ initResizable(false); });
@@ -84,60 +82,35 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div><div class="header">
-  <div class="headertitle"><div class="title">C++ Phsyics Engine </div></div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="struct_coord_struct-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">CoordStruct Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md__main_page"></a> @MainPage C++ 2d Physics Engine</p>
-<h1><a class="anchor" id="autotoc_md0"></a>
-C++ 2d Physics Engine</h1>
-<p>By Lucas Capp</p>
-<h3><a class="anchor" id="autotoc_md1"></a>
-Description</h3>
-<p>This is a Physics Engine for 2d C++ applications and is a light weight tool designed for fairly simple C++ projects. <br  />
- Download or view the code from github <a href="https://github.com/CappLucas/CppPhysicsEngine">here</a>. <br  />
-</p>
-<h3><a class="anchor" id="autotoc_md2"></a>
-Overview</h3>
-<p>The physics engine works as follows:</p>
-<ul>
-<li>Class called <em><a class="el" href="class_object_manager.html" title="Manages game objects, including creation, storage, and deletion.">ObjectManager</a></em> manages objects in the simulation.<ul>
-<li><b>stores, removes, adds, finds, and loops through</b> objects to update them.</li>
+
+<p>A structure with 2 float values, x and y.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_types_8h_source.html">Types.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a183d7226fc5a8470ce9b9f04f9cb69bb" id="r_a183d7226fc5a8470ce9b9f04f9cb69bb"><td class="memItemLeft" align="right" valign="top"><a id="a183d7226fc5a8470ce9b9f04f9cb69bb" name="a183d7226fc5a8470ce9b9f04f9cb69bb"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>x</b></td></tr>
+<tr class="separator:a183d7226fc5a8470ce9b9f04f9cb69bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a5966a881bc3e76e9becf00639585ac" id="r_a1a5966a881bc3e76e9becf00639585ac"><td class="memItemLeft" align="right" valign="top"><a id="a1a5966a881bc3e76e9becf00639585ac" name="a1a5966a881bc3e76e9becf00639585ac"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
+<tr class="separator:a1a5966a881bc3e76e9becf00639585ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A structure with 2 float values, x and y. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li>CppPhysicsEngine/Header/<a class="el" href="_types_8h_source.html">Types.h</a></li>
 </ul>
-</li>
-<li>Class called <em><a class="el" href="class_object.html">Object</a></em> represents any object or entity in your simulation.<ul>
-<li>Contains members like <b>Velocity</b>, <b>Acceleration</b>, <b>Mass</b>, and more.</li>
-<li>Contains members based on the given shape.</li>
-<li>Updates it's position given a delta time.</li>
-</ul>
-</li>
-<li>Class called <em><a class="el" href="class_rectangle.html" title="Class that holds rectangle specific methods and members.">Rectangle</a></em> represents a rectangular game object.<ul>
-<li>Contains member called plane.</li>
-</ul>
-</li>
-<li>Class called <em><a class="el" href="class_circle.html">Circle</a></em> represents a circular game object.<ul>
-<li>Contains members like radius and center.</li>
-</ul>
-</li>
-<li>Class called <em>Collision manager</em> manages collisions<ul>
-<li>Holds a <em>reference</em> to objects in an instance of and <b><a class="el" href="class_object_manager.html" title="Manages game objects, including creation, storage, and deletion.">ObjectManager</a></b> class</li>
-<li>Finds collisions, then resolves collisions my changing positions and other attributes of game objects.</li>
-</ul>
-</li>
-<li>File called <em><a class="el" href="_physics_equations_8h.html" title="Contains physics equations as functions.">PhysicsEquations.h</a></em> holds functions that represent physics equations.<ul>
-<li>Contains functions like <b>findVelocity(deltaTime, Velocity, Acceleration)</b>, or <b>findForce(Mass, Acceleration)</b></li>
-</ul>
-</li>
-</ul>
-<p><br  />
-</p>
-<blockquote class="doxtable">
-<p>&zwj;Note, most if not all classes contain <br  />
- public getters and setters for almost <br  />
- all class members. </p>
-</blockquote>
-</div></div><!-- PageDoc -->
-<a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

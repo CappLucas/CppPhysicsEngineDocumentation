@@ -1,0 +1,55 @@
+\doxysection{Object\+Manager.\+h}
+\hypertarget{_object_manager_8h_source}{}\label{_object_manager_8h_source}\index{CppPhysicsEngine/Header/ObjectManager.h@{CppPhysicsEngine/Header/ObjectManager.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ OBJECTMANAGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ OBJECTMANAGER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Object.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/class\ Structure\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00014\ \textcolor{comment}{}}
+\DoxyCodeLine{00015\ \textcolor{comment}{We\ have\ a\ Object\ Manager\ that\ contains\ the\ game\ objects.}}
+\DoxyCodeLine{00016\ \textcolor{comment}{}}
+\DoxyCodeLine{00017\ \textcolor{comment}{We\ give\ the\ object\ manager\ an\ instance\ of\ collision\ manager\ that\ has\ a\ reference\ to\ all\ objects.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{}}
+\DoxyCodeLine{00019\ \textcolor{comment}{Each\ object\ has\ certain\ properties\ that\ are\ used\ depending\ on\ shape\ type.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{00021\ \textcolor{comment}{Each\ object\ has\ a\ class\ representing\ a\ shape\ it\ could\ be\ and\ things\ like\ velocity,\ mass,\ and\ accelleration}}
+\DoxyCodeLine{00022\ \textcolor{comment}{}}
+\DoxyCodeLine{00023\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_object_manager}{ObjectManager}}\{}
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_object_manager}{\string~ObjectManager}}();}
+\DoxyCodeLine{00035\ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ gravity;}
+\DoxyCodeLine{00039\ \ \ \ \ std::vector<Object*>\ \mbox{\hyperlink{class_object_manager_a06d42be84d2c3c555e2faf1c33cb5db1}{getAllObjects}}()\{\textcolor{keywordflow}{return}\ allObjects;\ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00047\ \ \ \ \ std::vector<Object*>::iterator\ \mbox{\hyperlink{class_object_manager_af10071708cbaa5d2ad2e658c7a166661}{getObjectIterator}}(std::string\ objName);}
+\DoxyCodeLine{00048\ \ \ \ \ std::vector<Object*>::iterator\ \mbox{\hyperlink{class_object_manager_af10071708cbaa5d2ad2e658c7a166661}{getObjectIterator}}(\textcolor{keywordtype}{int}\ objId);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{class_object}{Object}}\ *\mbox{\hyperlink{class_object_manager_add120f5ca9daddbdb699cca283d9aec6}{getObject}}(std::string\ objName);}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{class_object}{Object}}\ *\mbox{\hyperlink{class_object_manager_add120f5ca9daddbdb699cca283d9aec6}{getObject}}(\textcolor{keywordtype}{int}\ objId);}
+\DoxyCodeLine{00057\ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_object_manager_a9e966559e9fecdcdd9aac26e3838990e}{addObject}}(std::string\ newName,\ std::string\ objType,\ \mbox{\hyperlink{struct_corner_struct}{Plane}}\ newPlane,\ \mbox{\hyperlink{struct_coord_struct}{Velocity}}\ newVelocity\ =\ \{0,0\},\ \mbox{\hyperlink{struct_coord_struct}{Acceleration}}\ newAcceleration\ =\ \{0,0\},\ \textcolor{keywordtype}{float}\ newMass\ =\ 1);}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_object_manager_a9e966559e9fecdcdd9aac26e3838990e}{addObject}}(std::string\ newName,\ std::string\ objType,\ \mbox{\hyperlink{struct_coord_struct}{Cooridinate}}\ center,\ \textcolor{keywordtype}{float}\ radius,\ \mbox{\hyperlink{struct_coord_struct}{Velocity}}\ newVelocity\ =\ \{0,0\},\ \mbox{\hyperlink{struct_coord_struct}{Acceleration}}\ newAcceleration\ =\ \{0,0\},\ \textcolor{keywordtype}{float}\ newMass\ =\ 1);}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ removeObject(std::string\ objId);}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ removeObject(\textcolor{keywordtype}{int}\ objId);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ printObjectInfo();}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{comment}{//\ updates\ the\ position\ and\ velocity\ of\ the\ object\ based\ on\ delta\ time.}}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ updateObjects(\textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00083\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00085\ \ \ \ \ std::vector<Object*>\ allObjects;}
+\DoxyCodeLine{00086\ \};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

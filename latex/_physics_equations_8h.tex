@@ -1,0 +1,117 @@
+\doxysection{Cpp\+Physics\+Engine/\+Header/\+Physics\+Equations.h File Reference}
+\hypertarget{_physics_equations_8h}{}\label{_physics_equations_8h}\index{CppPhysicsEngine/Header/PhysicsEquations.h@{CppPhysicsEngine/Header/PhysicsEquations.h}}
+
+
+Contains physics equations as functions.  
+
+
+{\ttfamily \#include "{}Types.\+h"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{_physics_equations_8h_a748a267f4861564cc36c4f9aa2323dfb}{find\+Force}} (float object\+Mass, float object\+Acceleration)
+\begin{DoxyCompactList}\small\item\em Finds force using f = ma. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_physics_equations_8h_a88a17efa4ed6d5464aabae34e2fe49b9}{find\+Velocity}} (float delta\+Time, float object\+Velocity, float object\+Acceleration)
+\begin{DoxyCompactList}\small\item\em Finds velocity with v = v + at. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_physics_equations_8h_a21b0bbc390ad9572ab7d9e37aa2e8db5}{find\+Displacement}} (float delta\+Time, float object\+Velocity, float object\+Acceleration)
+\begin{DoxyCompactList}\small\item\em Finds displacement using x = v\texorpdfstring{$\ast$}{*}t + (.5)\texorpdfstring{$\ast$}{*}(a)\texorpdfstring{$\ast$}{*}(square(t)). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_physics_equations_8h_aa7655b64032a51ae01d6b0c47155fc39}{find\+Displacement}} (float delta\+Time, float object\+Velocity)
+\begin{DoxyCompactList}\small\item\em Overloaded function for find displacement without acceleration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains physics equations as functions. 
+
+Each function represents some sort of physics equation or something close.
+
+\begin{DoxyNote}{Note}
+These functions are mainly for 1-\/d calculations, most do not take Coord\+Structs or other structs as arguments and do not return them. They will typically return float values. 
+\end{DoxyNote}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_physics_equations_8h_aa7655b64032a51ae01d6b0c47155fc39}\index{PhysicsEquations.h@{PhysicsEquations.h}!findDisplacement@{findDisplacement}}
+\index{findDisplacement@{findDisplacement}!PhysicsEquations.h@{PhysicsEquations.h}}
+\doxysubsubsection{\texorpdfstring{findDisplacement()}{findDisplacement()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{_physics_equations_8h_aa7655b64032a51ae01d6b0c47155fc39} 
+float find\+Displacement (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{, }\item[{float}]{object\+Velocity}{}\end{DoxyParamCaption})}
+
+
+
+Overloaded function for find displacement without acceleration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The delta time. \\
+\hline
+{\em object\+Velocity} & The objects Velocity. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Displacement as type float. 
+\end{DoxyReturn}
+\Hypertarget{_physics_equations_8h_a21b0bbc390ad9572ab7d9e37aa2e8db5}\index{PhysicsEquations.h@{PhysicsEquations.h}!findDisplacement@{findDisplacement}}
+\index{findDisplacement@{findDisplacement}!PhysicsEquations.h@{PhysicsEquations.h}}
+\doxysubsubsection{\texorpdfstring{findDisplacement()}{findDisplacement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{_physics_equations_8h_a21b0bbc390ad9572ab7d9e37aa2e8db5} 
+float find\+Displacement (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{, }\item[{float}]{object\+Velocity}{, }\item[{float}]{object\+Acceleration}{}\end{DoxyParamCaption})}
+
+
+
+Finds displacement using x = v\texorpdfstring{$\ast$}{*}t + (.5)\texorpdfstring{$\ast$}{*}(a)\texorpdfstring{$\ast$}{*}(square(t)). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The delta time. \\
+\hline
+{\em object\+Velocity} & The objects velocity. \\
+\hline
+{\em object\+Acceleration} & The objects acceleration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Displacement as type float. 
+\end{DoxyReturn}
+\Hypertarget{_physics_equations_8h_a748a267f4861564cc36c4f9aa2323dfb}\index{PhysicsEquations.h@{PhysicsEquations.h}!findForce@{findForce}}
+\index{findForce@{findForce}!PhysicsEquations.h@{PhysicsEquations.h}}
+\doxysubsubsection{\texorpdfstring{findForce()}{findForce()}}
+{\footnotesize\ttfamily \label{_physics_equations_8h_a748a267f4861564cc36c4f9aa2323dfb} 
+float find\+Force (\begin{DoxyParamCaption}\item[{float}]{object\+Mass}{, }\item[{float}]{object\+Acceleration}{}\end{DoxyParamCaption})}
+
+
+
+Finds force using f = ma. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\+Mass} & A variable of type float for the objects mass. \\
+\hline
+{\em object\+Acceleration} & A variable of type float for objects acceleration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Force as type float. 
+\end{DoxyReturn}
+\Hypertarget{_physics_equations_8h_a88a17efa4ed6d5464aabae34e2fe49b9}\index{PhysicsEquations.h@{PhysicsEquations.h}!findVelocity@{findVelocity}}
+\index{findVelocity@{findVelocity}!PhysicsEquations.h@{PhysicsEquations.h}}
+\doxysubsubsection{\texorpdfstring{findVelocity()}{findVelocity()}}
+{\footnotesize\ttfamily \label{_physics_equations_8h_a88a17efa4ed6d5464aabae34e2fe49b9} 
+float find\+Velocity (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{, }\item[{float}]{object\+Velocity}{, }\item[{float}]{object\+Acceleration}{}\end{DoxyParamCaption})}
+
+
+
+Finds velocity with v = v + at. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The delta time. \\
+\hline
+{\em object\+Velocity} & The objects velocity. \\
+\hline
+{\em object\+Acceleration} & The objects acceleration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new velocity as type float. 
+\end{DoxyReturn}

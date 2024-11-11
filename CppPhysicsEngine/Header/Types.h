@@ -1,3 +1,14 @@
+/**
+ * Contains typedefs used throughout program.
+ * 
+ * This file contains structures, like CoordStruct and CornerStruct.
+ * These structures are then used in "using" statements.
+ * 
+ * ex: using Cooridinate = CoordStruct;
+ * 
+ * @file Types.h
+ */
+
 #ifndef TYPES_H
 #define TYPES_H
 

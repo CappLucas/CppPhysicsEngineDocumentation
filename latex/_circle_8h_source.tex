@@ -1,0 +1,47 @@
+\doxysection{Circle.\+h}
+\hypertarget{_circle_8h_source}{}\label{_circle_8h_source}\index{CppPhysicsEngine/Header/Circle.h@{CppPhysicsEngine/Header/Circle.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CIRCLE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CIRCLE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_types_8h}{Types.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_circle}{Circle}}\{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_circle}{Circle}}(\mbox{\hyperlink{struct_coord_struct}{Cooridinate}}\ newCenter,\ \textcolor{keywordtype}{float}\ newRadius)\ :\ radius(newRadius),\ center(newCenter)\{\}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ getters\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{float}\ getRadius()\{\textcolor{keywordflow}{return}\ radius;\}}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{struct_coord_struct}{Cooridinate}}\ getCenter()\{\textcolor{keywordflow}{return}\ center;\}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{float}\ getDiameter()\{\textcolor{keywordflow}{return}\ radius*2;\}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{struct_coord_struct}{Cooridinate}}\ getLeft()\{\textcolor{keywordflow}{return}\ \{center.x\ -\/\ radius,\ center.y\};\}}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{struct_coord_struct}{Cooridinate}}\ getRight()\{\textcolor{keywordflow}{return}\ \{center.x\ +\ radius,\ center.y\};\}}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{struct_coord_struct}{Cooridinate}}\ getTop()\{\textcolor{keywordflow}{return}\ \{center.x,\ center.y\ -\/\ radius\};\}}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{struct_coord_struct}{Cooridinate}}\ getBottom()\{\textcolor{keywordflow}{return}\ \{center.x,\ center.y\ +\ radius\};\}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ setters\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ setRadius(\textcolor{keywordtype}{float}\ newRadius)\{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(newRadius\ >\ 0)\{radius\ =\ newRadius;\}}
+\DoxyCodeLine{00025\ \ \ \ \ \}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ setCenter(\mbox{\hyperlink{struct_coord_struct}{Cooridinate}}\ newCenter)\{center\ =\ newCenter;\}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/methods-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ moveTo(\mbox{\hyperlink{struct_coord_struct}{Cooridinate}}\ newCenter)\{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ center\ =\ newCenter;}
+\DoxyCodeLine{00031\ \ \ \ \ \};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ move(\mbox{\hyperlink{struct_coord_struct}{Cooridinate}}\ displacement)\{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ center.x\ +=\ displacement.x;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ center.y\ +=\ displacement.y;}
+\DoxyCodeLine{00035\ \ \ \ \ \};}
+\DoxyCodeLine{00036\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{float}\ radius;}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{struct_coord_struct}{Cooridinate}}\ center;}
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

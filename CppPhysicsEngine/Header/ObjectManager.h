@@ -54,14 +54,25 @@ public:
      */
     Object *getObject(std::string objName);
     Object *getObject(int objId);
-    /**
-     * @brief Creates object of given object constructor parameters.
-     * @param objName name of object to create.
-     */
+    
+    /// @brief Overloaded method for adding rectangle.
+    /// @param newName Objects name.
+    /// @param objType Object type (Rectangle or Circle)
+    /// @param newPlane The plane.
+    /// @param newVelocity 
+    /// @param newAcceleration 
+    /// @param newMass 
     void addObject(std::string newName, std::string objType, Plane newPlane, Velocity newVelocity = {0,0}, Acceleration newAcceleration = {0,0}, float newMass = 1);
+    /// @brief Overloaded method for adding circle.
+    /// @param newName 
+    /// @param objType 
+    /// @param center 
+    /// @param radius 
+    /// @param newVelocity 
+    /// @param newAcceleration 
+    /// @param newMass 
     void addObject(std::string newName, std::string objType, Cooridinate center, float radius, Velocity newVelocity = {0,0}, Acceleration newAcceleration = {0,0}, float newMass = 1);
     /**
-     * @details Given name, it deletes the object with that name. Does not delete anything if allObjects is empty or name is not found in allObjects.
      */
     void removeObject(std::string objId);
     void removeObject(int objId);

@@ -1,0 +1,155 @@
+\doxysection{Rectangle Class Reference}
+\hypertarget{class_rectangle}{}\label{class_rectangle}\index{Rectangle@{Rectangle}}
+
+
+Class that holds rectangle specific methods and members.  
+
+
+
+
+{\ttfamily \#include $<$Rectangle.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_rectangle_a4edfcaea14426946abbfb55d81c7d068}{Rectangle}} (\mbox{\hyperlink{_types_8h_a5355d31118784b2df66bae4d9cccde10}{Plane}} new\+Plane)
+\begin{DoxyCompactList}\small\item\em Overloaded constructor for 2 corner initializing. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_rectangle_ad0b536a31f24fc48e85feb7f0fc1e460}{Rectangle}} (\mbox{\hyperlink{_types_8h_a2dcce17dc5e0811e1ae894cbce964bff}{Cooridinate}} new\+Bottom\+Left\+Corner, float length, float height)
+\begin{DoxyCompactList}\small\item\em Overloaded constructor for bottom left corner and length and width value initializing. \end{DoxyCompactList}\item 
+\Hypertarget{class_rectangle_a5143f9e653467fddc7d2b23f21e181f7}\label{class_rectangle_a5143f9e653467fddc7d2b23f21e181f7} 
+\mbox{\hyperlink{_types_8h_a2dcce17dc5e0811e1ae894cbce964bff}{Cooridinate}} {\bfseries get\+Bottom\+Left\+Corner} ()
+\item 
+\Hypertarget{class_rectangle_a2079a4423fb74ea1e25b3d7269ff4661}\label{class_rectangle_a2079a4423fb74ea1e25b3d7269ff4661} 
+\mbox{\hyperlink{_types_8h_a2dcce17dc5e0811e1ae894cbce964bff}{Cooridinate}} {\bfseries get\+Top\+Right\+Corner} ()
+\item 
+\Hypertarget{class_rectangle_a95881b323dc5090d81217e41a536d8f1}\label{class_rectangle_a95881b323dc5090d81217e41a536d8f1} 
+float {\bfseries get\+LeftX} ()
+\item 
+\Hypertarget{class_rectangle_af95a17bf834dc6f41f9b3f3575449ce7}\label{class_rectangle_af95a17bf834dc6f41f9b3f3575449ce7} 
+float {\bfseries get\+RightX} ()
+\item 
+\Hypertarget{class_rectangle_a739e0347a395cdf9050b5c5694b848f3}\label{class_rectangle_a739e0347a395cdf9050b5c5694b848f3} 
+float {\bfseries get\+BottomY} ()
+\item 
+\Hypertarget{class_rectangle_a5b629d746761d40924b32b58525bfce8}\label{class_rectangle_a5b629d746761d40924b32b58525bfce8} 
+float {\bfseries get\+TopY} ()
+\item 
+\Hypertarget{class_rectangle_a8a61b4f616b528e404f3dc6722f0f942}\label{class_rectangle_a8a61b4f616b528e404f3dc6722f0f942} 
+float {\bfseries get\+Length} ()
+\item 
+\Hypertarget{class_rectangle_a4097bd0222598527727f6552b003eb8a}\label{class_rectangle_a4097bd0222598527727f6552b003eb8a} 
+float {\bfseries get\+Height} ()
+\item 
+\Hypertarget{class_rectangle_a1f889640aa0fe048c2212ffaf10d5125}\label{class_rectangle_a1f889640aa0fe048c2212ffaf10d5125} 
+float {\bfseries get\+XCenter} ()
+\item 
+\Hypertarget{class_rectangle_a6a0d2342b40c38b18592de6f13de6dae}\label{class_rectangle_a6a0d2342b40c38b18592de6f13de6dae} 
+float {\bfseries get\+YCenter} ()
+\item 
+\Hypertarget{class_rectangle_a2846978146411b222b72e29261fb14b6}\label{class_rectangle_a2846978146411b222b72e29261fb14b6} 
+\mbox{\hyperlink{_types_8h_a2dcce17dc5e0811e1ae894cbce964bff}{Cooridinate}} {\bfseries get\+Center} ()
+\item 
+\Hypertarget{class_rectangle_a313f61fe0a87d06f2ac68765640c214a}\label{class_rectangle_a313f61fe0a87d06f2ac68765640c214a} 
+void {\bfseries set\+Bottom\+Left} (\mbox{\hyperlink{_types_8h_a2dcce17dc5e0811e1ae894cbce964bff}{Cooridinate}} new\+Corner)
+\item 
+\Hypertarget{class_rectangle_a3677ea0f2206c13ae4944e379f6e9a50}\label{class_rectangle_a3677ea0f2206c13ae4944e379f6e9a50} 
+void {\bfseries set\+Top\+Right} (\mbox{\hyperlink{_types_8h_a2dcce17dc5e0811e1ae894cbce964bff}{Cooridinate}} new\+Corner)
+\item 
+\Hypertarget{class_rectangle_a2bf62c3c3f7ebb6bfb8ea47e5ea89b1e}\label{class_rectangle_a2bf62c3c3f7ebb6bfb8ea47e5ea89b1e} 
+void {\bfseries set\+LeftX} (float leftX)
+\item 
+\Hypertarget{class_rectangle_a4249874116614786631b53526603b6da}\label{class_rectangle_a4249874116614786631b53526603b6da} 
+void {\bfseries set\+RightX} (float rightX)
+\item 
+\Hypertarget{class_rectangle_a6be84ab0bef3897c3e897de4b3feee3d}\label{class_rectangle_a6be84ab0bef3897c3e897de4b3feee3d} 
+void {\bfseries set\+BottomY} (float bottomY)
+\item 
+\Hypertarget{class_rectangle_a3b481abe132cb0e93e61f5419e0cbeba}\label{class_rectangle_a3b481abe132cb0e93e61f5419e0cbeba} 
+void {\bfseries set\+TopY} (float topY)
+\item 
+void \mbox{\hyperlink{class_rectangle_a06ae1597259b6650579e4860a8c5e090}{move\+To}} (\mbox{\hyperlink{_types_8h_a2dcce17dc5e0811e1ae894cbce964bff}{Cooridinate}} new\+Position)
+\begin{DoxyCompactList}\small\item\em Moves the rectangles cooridinates to a cooridinate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rectangle_a0d086cfde709168b2b2270e280908819}{move}} (\mbox{\hyperlink{_types_8h_a2dcce17dc5e0811e1ae894cbce964bff}{Cooridinate}} displacement)
+\begin{DoxyCompactList}\small\item\em Moves the rectangle relative to current position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that holds rectangle specific methods and members. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_rectangle_a4edfcaea14426946abbfb55d81c7d068}\index{Rectangle@{Rectangle}!Rectangle@{Rectangle}}
+\index{Rectangle@{Rectangle}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{Rectangle()}{Rectangle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_rectangle_a4edfcaea14426946abbfb55d81c7d068} 
+Rectangle\+::\+Rectangle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_types_8h_a5355d31118784b2df66bae4d9cccde10}{Plane}}}]{new\+Plane}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overloaded constructor for 2 corner initializing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Plane} & a variable of type Plane that represents the bottom left corner and the top right corner of the rectangle. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_rectangle_ad0b536a31f24fc48e85feb7f0fc1e460}\index{Rectangle@{Rectangle}!Rectangle@{Rectangle}}
+\index{Rectangle@{Rectangle}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{Rectangle()}{Rectangle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_rectangle_ad0b536a31f24fc48e85feb7f0fc1e460} 
+Rectangle\+::\+Rectangle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_types_8h_a2dcce17dc5e0811e1ae894cbce964bff}{Cooridinate}}}]{new\+Bottom\+Left\+Corner}{, }\item[{float}]{length}{, }\item[{float}]{height}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overloaded constructor for bottom left corner and length and width value initializing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Bottom\+Left\+Corner} & a variable of type Cooridinate for the bottom left corner. \\
+\hline
+{\em length} & a variable of type float for length of rectangle. \\
+\hline
+{\em height} & a variable fo type float for height of rectangle. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_rectangle_a0d086cfde709168b2b2270e280908819}\index{Rectangle@{Rectangle}!move@{move}}
+\index{move@{move}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily \label{class_rectangle_a0d086cfde709168b2b2270e280908819} 
+void Rectangle\+::move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_types_8h_a2dcce17dc5e0811e1ae894cbce964bff}{Cooridinate}}}]{displacement}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Moves the rectangle relative to current position. 
+
+Given a displacement, it will move rectangle.
+
+
+\begin{DoxyParams}{Parameters}
+{\em displacement} & A variable of type Cooridinate to represent displacement. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_rectangle_a06ae1597259b6650579e4860a8c5e090}\index{Rectangle@{Rectangle}!moveTo@{moveTo}}
+\index{moveTo@{moveTo}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{moveTo()}{moveTo()}}
+{\footnotesize\ttfamily \label{class_rectangle_a06ae1597259b6650579e4860a8c5e090} 
+void Rectangle\+::move\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_types_8h_a2dcce17dc5e0811e1ae894cbce964bff}{Cooridinate}}}]{new\+Position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Moves the rectangles cooridinates to a cooridinate. 
+
+Moves the rectangle to an absolute location.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Position} & A cooridinate for the bottom left corner of the new position. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Cpp\+Physics\+Engine/\+Header/\mbox{\hyperlink{_rectangle_8h}{Rectangle.\+h}}\end{DoxyCompactItemize}
