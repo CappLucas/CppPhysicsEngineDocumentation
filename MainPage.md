@@ -37,4 +37,3 @@ The physics engine works as follows:
 > public getters and setters for almost  
 > all class members.
 
-More stuff (testing)
