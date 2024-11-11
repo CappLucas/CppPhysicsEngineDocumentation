@@ -1,6 +1,6 @@
 @MainPage C++ 2d Physics Engine
 
-[gitHubProject]: https://www.github.com
+[gitHubProject]: https://github.com/CappLucas/CppPhysicsEngine
 
 # C++ 2d Physics Engine
 
@@ -9,7 +9,7 @@ By Lucas Capp
 ### Description
 
 This is a Physics Engine for 2d C++ applications and is a light weight tool designed for fairly simple C++ projects.  
-Download the folder from github [here][gitHubProject].  
+Download or view the code from github [here][gitHubProject].  
 
 ### Overview
 

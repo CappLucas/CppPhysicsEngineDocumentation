@@ -1,5 +1,5 @@
-#ifndef COLLISIONDECTECTIONMANAGER_H
-#define COLLISIONDECTECTIONMANAGER_H
+#ifndef COLLISIONDETECTIONMANAGER_H
+#define COLLISIONDETECTIONMANAGER_H
 
 #pragma once
 
@@ -8,11 +8,11 @@
 
 #include <vector>
 
-class CollisionDectectionManager
+class CollisionDetectionManager
 {
 public:
-    CollisionDectectionManager(ObjectVector &allObjectsReference) : allObjects(allObjectsReference){};
-    ~CollisionDectectionManager();
+    CollisionDetectionManager(ObjectVector &allObjectsReference) : allObjects(allObjectsReference){};
+    ~CollisionDetectionManager();
 
     void findCollisions();
 
